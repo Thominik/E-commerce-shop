@@ -11,6 +11,10 @@ public static class ApplicationServiceExtensions
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
         services.AddScoped<ITokenService, TokenService>();
+
+        services.AddScoped<IOrderService, OrderService>();
+
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
         
         services.AddScoped<IProductRepository, ProductRepository>();
 
